@@ -27,7 +27,6 @@ struct RepositoryNetworking {
             .do(onNext: { _ in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = true
             })
-            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .flatMapLatest { text in // .Background thread, network request
                 return requestJSON(.get, "https://api.github.com/users/\(text)/repos").debug()
             }
