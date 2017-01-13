@@ -11,12 +11,28 @@ import RxCocoa
 import RxSwift
 import Alamofire
 
-protocol RepositoryViewModelType {
+protocol RepositoryViewModelType: Transitionable {
+    
+    var repositorySubject: PublishSubject<Repository> { get }
     
     func fetchRepositories(for observableText: Observable<String>) -> Driver<Result<[Repository]>>
 }
 
-struct RepositoryViewModel : RepositoryViewModelType {
+class RepositoryViewModel : RepositoryViewModelType {
+    
+    fileprivate let disposeBag = DisposeBag()
+    var repositorySubject = PublishSubject<Repository>()
+    weak var navigationCoordinator: CoordinatorType?
+    
+    init() {
+        
+        repositorySubject
+            .asObservable()
+            .subscribe(onNext: { [unowned self] in
+                self.navigationCoordinator?.performTransition(transition: .showRepository($0))
+            })
+            .addDisposableTo(disposeBag)
+    }
     
     func fetchRepositories(for observableText: Observable<String>) -> Driver<Result<[Repository]>> {
         return RepositoryNetworking

@@ -19,6 +19,7 @@
 		883CF3161E140EEA000945D2 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CF3141E140EEA000945D2 /* RepositoryCell.swift */; };
 		883CF3171E140EEA000945D2 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883CF3151E140EEA000945D2 /* RepositoryCell.xib */; };
 		883CF31A1E1418CC000945D2 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CF3191E1418CC000945D2 /* RepositoryViewModel.swift */; };
+		886CD7111E2939EB007B8242 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7101E2939EB007B8242 /* MainCoordinator.swift */; };
 		E49642F7E5B0641522F8834C /* Pods_RxAlamofireExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15F54DAB927236817D3EA8D /* Pods_RxAlamofireExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		883CF3141E140EEA000945D2 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		883CF3151E140EEA000945D2 /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		883CF3191E1418CC000945D2 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		886CD7101E2939EB007B8242 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E0C3614F3DA1241117E81BEB /* Pods-RxAlamofireExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAlamofireExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxAlamofireExample/Pods-RxAlamofireExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E15F54DAB927236817D3EA8D /* Pods_RxAlamofireExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxAlamofireExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				883CF3151E140EEA000945D2 /* RepositoryCell.xib */,
 				883CF30A1E1400AB000945D2 /* MainViewController.swift */,
 				883CF30B1E1400AB000945D2 /* MainViewController.xib */,
+				886CD7101E2939EB007B8242 /* MainCoordinator.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Giovanny Orozco";
 				TargetAttributes = {
 					883CF2D71E140008000945D2 = {
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				883CF3161E140EEA000945D2 /* RepositoryCell.swift in Sources */,
+				886CD7111E2939EB007B8242 /* MainCoordinator.swift in Sources */,
 				883CF2DC1E140008000945D2 /* AppDelegate.swift in Sources */,
 				883CF31A1E1418CC000945D2 /* RepositoryViewModel.swift in Sources */,
 				883CF3131E140476000945D2 /* RepositoryNetworking.swift in Sources */,

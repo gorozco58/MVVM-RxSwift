@@ -66,5 +66,11 @@ extension MainViewController {
                 cell.titleLabel.text = repository.name
             }
             .addDisposableTo(disposeBag)
+        
+        tableView
+            .rx
+            .modelSelected(Repository.self)
+            .bindTo(viewModel.repositorySubject)
+            .addDisposableTo(disposeBag)
     }
 }
